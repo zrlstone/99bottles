@@ -1,4 +1,12 @@
 class Bottles
+  def song
+    verses(99, 0)
+  end
+
+  def verses(start, finish)
+    start.downto(finish).map { |number| verse(number) }.join("\n")
+  end
+
   def verse(number)
     case number
     when 0
@@ -24,3 +32,5 @@ class Bottles
     end
   end
 end
+
+puts Bottles.new.song
