@@ -59,3 +59,6 @@ Changes to code can be subdivided into:
 3. Parse, execute and use its result
 4. Delete unused code
 
+## Seperating Responsiblities
+There’s a big difference between a conditional that selects the correct object and one that supplies behavior. The first is acceptable and generally unavoidable. The second suggests that you are missing objects in your domain.
+
