@@ -42,3 +42,20 @@ If you’re in the middle of writing a test suite, better information is as clos
 ## 2.10 Writing Cost-Effective Tests
 Tests should confirm what your code does without any knowledge of how your code does it.
 
+## 3.8 Refactor Summary
+- Be guided by the Open-Closed Principle and so separate changes into two broad steps:
+1. Refactor the existing code to be open to the new requirement (write or update tests first)
+2. Then add the new code
+- Be guided by code smells. Improve the code by identifying and rmeoving smells and have faith that as code improves, a path to openness will appear
+
+### Flocking Rules
+1. Select the things that are most alike
+2. Find the smallest difference between them
+3. Make the simplest change that will remove the difference
+
+Changes to code can be subdivided into:
+1. Parse the new code
+2. Parse and execute it
+3. Parse, execute and use its result
+4. Delete unused code
+
