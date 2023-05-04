@@ -14,7 +14,7 @@ class Bottles
   end
 
   def verse(number)
-    verse_template.new(number).lyrics
+    verse_template.lyrics(number)
   end
 end
 
@@ -98,15 +98,17 @@ class BottleNumber6 < BottleNumber
 end
 
 class BottleVerse
-  attr_reader :number
+  def self.lyrics(number)
+    new(BottleNumber.for(number)).lyrics
+  end
 
-  def initialize(number)
-    @number = number
+  attr_reader :bottle_number
+
+  def initialize(bottle_number)
+    @bottle_number = bottle_number
   end
 
   def lyrics
-    bottle_number = BottleNumber.for(number)
-
     "#{bottle_number} of beer on the wall, ".capitalize +
     "#{bottle_number} of beer.\n" +
     "#{bottle_number.action}, " +
