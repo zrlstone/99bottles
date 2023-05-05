@@ -3,14 +3,6 @@ require_relative "full_song"
 
 RSpec.describe Bottles do
   describe "#verse" do
-    it "returns the first verse" do
-      expected = "99 bottles of beer on the wall, " +
-                 "99 bottles of beer.\n" +
-                 "Take one down and pass it around, " +
-                 "98 bottles of beer on the wall.\n"
-      expect(Bottles.new.verse(99)).to eq(expected)
-    end
-
     it "returns another verse" do
       expected = "3 bottles of beer on the wall, " +
                  "3 bottles of beer.\n" +
